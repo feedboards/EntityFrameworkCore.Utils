@@ -1,4 +1,4 @@
-﻿namespace Utils.EF.DTOs.Response
+﻿namespace EntityFrameworkCore.Utils.DTOs.Response
 {
     public class DeleteResponseDto
     {

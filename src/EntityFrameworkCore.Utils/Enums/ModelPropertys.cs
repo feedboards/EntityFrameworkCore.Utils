@@ -1,4 +1,4 @@
-﻿namespace Utils.EF.Enums
+﻿namespace EntityFrameworkCore.Utils.Enums
 {
     internal enum ModelProperties
     {

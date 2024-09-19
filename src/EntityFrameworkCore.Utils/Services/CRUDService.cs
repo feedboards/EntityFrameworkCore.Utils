@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
+using EntityFrameworkCore.Utils.DTOs.Request;
+using EntityFrameworkCore.Utils.DTOs.Response;
+using EntityFrameworkCore.Utils.Enums;
+using EntityFrameworkCore.Utils.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using Utils.EF.DTOs.Request;
-using Utils.EF.DTOs.Response;
-using Utils.EF.Enums;
-using Utils.EF.Interfaces;
 
-namespace Utils.EF.Services
+namespace EntityFrameworkCore.Utils.Services
 {
     public class CRUDService<TId, TModel, TResponseDto, TRequestDto> : ICRUDService<TId, TResponseDto, TRequestDto>
         where TModel : class

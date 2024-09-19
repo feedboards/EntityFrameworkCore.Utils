@@ -1,7 +1,7 @@
-﻿using Utils.EF.DTOs.Request;
-using Utils.EF.DTOs.Response;
+﻿using EntityFrameworkCore.Utils.DTOs.Request;
+using EntityFrameworkCore.Utils.DTOs.Response;
 
-namespace Utils.EF.Interfaces
+namespace EntityFrameworkCore.Utils.Interfaces
 {
     public interface ICRUDService<TId, TResponse, TRequest>
         where TResponse : class

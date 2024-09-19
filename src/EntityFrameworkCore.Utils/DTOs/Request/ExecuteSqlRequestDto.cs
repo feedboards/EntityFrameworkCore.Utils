@@ -1,4 +1,4 @@
-﻿namespace Utils.EF.DTOs.Request
+﻿namespace EntityFrameworkCore.Utils.DTOs.Request
 {
     public class ExecuteSqlRequestDto
     {

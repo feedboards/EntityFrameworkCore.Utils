@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Utils.EF.DTOs.Request;
+﻿using EntityFrameworkCore.Utils.DTOs.Request;
+using Microsoft.AspNetCore.Mvc;
 
-namespace Utils.EF.Interfaces
+namespace EntityFrameworkCore.Utils.Interfaces
 {
     public interface ICRUDController<TId, TRequestDto>
         where TRequestDto : class
