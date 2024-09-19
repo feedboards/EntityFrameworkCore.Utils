@@ -15,4 +15,8 @@
     <PackageReference Include="Utils.EF" Version="0.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\EntityFrameworkCore.Utils\EntityFrameworkCore.Utils.csproj" />
+  </ItemGroup>
+
 </Project>
