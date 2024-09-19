@@ -1,15 +1,15 @@
 ﻿namespace Utils.EF.Constants
 {
-    public static class ControllerRoutes
+    internal static class ControllerRoutes
     {
-        public const string ROOT = "";
+        internal static string ROOT = "";
 
-        public const string SQL = "sql";
+        internal static string SQL = "sql";
 
-        public const string ID = "id";
-        public const string ID_SOFT_DELETE = "id/soft-delete";
+        internal static string ID = "id";
+        internal static string ID_SOFT_DELETE = "id/soft-delete";
 
-        public const string ITEMS = "items";
-        public const string ITEMS_SOFT_DELETE = "items/soft-delete";
+        internal static string ITEMS = "items";
+        internal static string ITEMS_SOFT_DELETE = "items/soft-delete";
     }
 }

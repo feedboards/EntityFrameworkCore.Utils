@@ -16,8 +16,6 @@ namespace Utils.EF.Controllers
             _service = service;
         }
 
-        // Use Middleware ErrorHandlerMiddleware
-
         [HttpGet(ControllerRoutes.ROOT)]
         public virtual async Task<IActionResult> GetAllAsync()
         {

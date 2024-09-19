@@ -1,6 +1,6 @@
 ﻿namespace Utils.EF.Enums
 {
-    public enum ModelProperties
+    internal enum ModelProperties
     {
         Id,
         IsDeleted,
