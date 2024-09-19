@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Utils.EF.Constants;
-using Utils.EF.DTOs.Request;
-using Utils.EF.Interfaces;
+﻿using EntityFrameworkCore.Utils.Constants;
+using EntityFrameworkCore.Utils.DTOs.Request;
+using EntityFrameworkCore.Utils.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
-namespace Utils.EF.Controllers
+namespace EntityFrameworkCore.Utils.Controllers
 {
     public class CRUDController<TId, TResponseDto, TRequestDto> : Controller, ICRUDController<TId, TRequestDto>
         where TResponseDto : class
