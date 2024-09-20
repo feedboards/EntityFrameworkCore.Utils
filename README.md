@@ -45,7 +45,7 @@
 - `SoftDeleteAsync(TId id)`: GPT: MAKE HERE DELCRIPTION OF THE METHOD
 - `SoftDeleteAsync([FromBody] List<TId> id)`: GPT: MAKE HERE DELCRIPTION OF THE METHOD
 
-# How to add and configure `EntityFrameworkCore.Utils` to the project
+# How to add `EntityFrameworkCore.Utils` to the project
 
 Here’s a step-by-step guide on how to add `EntityFrameworkCore.Utils`
 
@@ -99,7 +99,7 @@ namespace PROJECT_NAME.API.Controllers
 
 ## CRUDService
 
-there're protected fields
+There're protected fields
 
 - `_mapper` AutoMapper
 - `_context` Your database context
@@ -238,7 +238,7 @@ namespace PROJECT_NAME.API.Middleware
 }
 ```
 
-## use `ErrorHandlerMiddleware`
+## Use `ErrorHandlerMiddleware`
 
 `Program.cs`
 
