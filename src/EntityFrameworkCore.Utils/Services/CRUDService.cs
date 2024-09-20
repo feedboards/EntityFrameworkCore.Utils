@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Dynamic;
+using AutoMapper;
 using EntityFrameworkCore.Utils.DTOs.Request;
 using EntityFrameworkCore.Utils.DTOs.Response;
 using EntityFrameworkCore.Utils.Enums;
@@ -218,13 +219,13 @@ namespace EntityFrameworkCore.Utils.Services
         public virtual async Task<object?> ExecuteSqlAsync(ExecuteSqlRequestDto obj)
         {
             using var command = _context.Database.GetDbConnection().CreateCommand();
-
+            
             command.CommandText = obj.Sql;
             _context.Database.OpenConnection();
-
+            
             using var result = await command.ExecuteReaderAsync();
             var results = new List<object>();
-
+            
             while (await result.ReadAsync())
             {
                var data = new ExpandoObject() as IDictionary<string, object>;
@@ -234,7 +235,7 @@ namespace EntityFrameworkCore.Utils.Services
                }
                results.Add(data);
             }
-
+            
             return results;
         }
     }
