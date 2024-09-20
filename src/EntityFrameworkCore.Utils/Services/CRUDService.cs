@@ -218,25 +218,7 @@ namespace EntityFrameworkCore.Utils.Services
 
         public virtual async Task<object?> ExecuteSqlAsync(ExecuteSqlRequestDto obj)
         {
-            using var command = _context.Database.GetDbConnection().CreateCommand();
-            
-            command.CommandText = obj.Sql;
-            _context.Database.OpenConnection();
-            
-            using var result = await command.ExecuteReaderAsync();
-            var results = new List<object>();
-            
-            while (await result.ReadAsync())
-            {
-               var data = new ExpandoObject() as IDictionary<string, object>;
-               for (var i = 0; i < result.FieldCount; i++)
-               {
-                   data.Add(result.GetName(i), result.IsDBNull(i) ? null : result.GetValue(i));
-               }
-               results.Add(data);
-            }
-            
-            return results;
+            return await _context.Database.ExecuteSqlRawAsync(obj.Sql);
         }
     }
 
