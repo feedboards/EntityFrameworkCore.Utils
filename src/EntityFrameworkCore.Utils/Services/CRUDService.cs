@@ -215,7 +215,7 @@ namespace EntityFrameworkCore.Utils.Services
             return deleteResults;
         }
 
-        public virtual async Task<dynamic?> ExecuteSqlAsync(ExecuteSqlRequestDto obj)
+        public virtual async Task<object?> ExecuteSqlAsync(ExecuteSqlRequestDto obj)
         {
             using var command = _context.Database.GetDbConnection().CreateCommand();
 
@@ -223,7 +223,7 @@ namespace EntityFrameworkCore.Utils.Services
             _context.Database.OpenConnection();
 
             using var result = await command.ExecuteReaderAsync();
-            var results = new List<dynamic>();
+            var results = new List<object>();
 
             while (await result.ReadAsync())
             {
