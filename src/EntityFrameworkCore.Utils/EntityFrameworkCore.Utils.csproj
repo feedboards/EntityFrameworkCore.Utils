@@ -13,6 +13,7 @@
 	<PackageTags>entity-framework-core;EF;EntityFramework;EntityFrameworkCore;EFCore;EntityFrameworkCoreUtils</PackageTags>
 	<RepositoryUrl>https://github.com/feedboards/EntityFrameworkCore.Utils</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
+	<GenerateOpenApiDocuments>false</GenerateOpenApiDocuments>
   </PropertyGroup>
 
 	<ItemGroup>
