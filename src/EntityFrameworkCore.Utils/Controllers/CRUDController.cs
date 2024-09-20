@@ -17,9 +17,9 @@ namespace EntityFrameworkCore.Utils.Controllers
         }
 
         [HttpGet(ControllerRoutes.ROOT)]
-        public virtual async Task<IActionResult> GetAllAsync()
+        public virtual async Task<IActionResult> GetAsync()
         {
-            return Ok(await _service.GetAllAsync());
+            return Ok(await _service.GetAsync());
         }
 
         [HttpPost(ControllerRoutes.ROOT)]
@@ -59,9 +59,9 @@ namespace EntityFrameworkCore.Utils.Controllers
         }
 
         [HttpPost(ControllerRoutes.ITEMS)]
-        public virtual async Task<IActionResult> InsertAllAsync([FromBody] List<TRequestDto> obj)
+        public virtual async Task<IActionResult> InsertAsync([FromBody] List<TRequestDto> obj)
         {
-            return Ok(await _service.InsertAllAsync(obj));
+            return Ok(await _service.InsertAsync(obj));
         }
 
         [HttpDelete(ControllerRoutes.ITEMS)]

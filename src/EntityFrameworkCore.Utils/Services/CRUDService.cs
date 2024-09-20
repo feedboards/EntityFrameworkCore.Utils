@@ -24,7 +24,7 @@ namespace EntityFrameworkCore.Utils.Services
             _table = context.Set<TModel>();
         }
 
-        public virtual async Task<List<TResponseDto>> GetAllAsync()
+        public virtual async Task<List<TResponseDto>> GetAsync()
         {
             var models = await _table.ToListAsync();
 
@@ -60,7 +60,7 @@ namespace EntityFrameworkCore.Utils.Services
             return _mapper.Map<TResponseDto>(model);
         }
 
-        public virtual async Task<List<TResponseDto>> InsertAllAsync(List<TRequestDto> obj)
+        public virtual async Task<List<TResponseDto>> InsertAsync(List<TRequestDto> obj)
         {
             var models = _mapper.Map<List<TModel>>(_mapper.Map<TResponseDto>(obj));
 

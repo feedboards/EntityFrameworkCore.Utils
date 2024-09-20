@@ -6,11 +6,11 @@ namespace EntityFrameworkCore.Utils.Interfaces
     public interface ICRUDController<TId, TRequestDto>
         where TRequestDto : class
     {
-        Task<IActionResult> GetAllAsync();
+        Task<IActionResult> GetAsync();
         Task<IActionResult> GetByIdAsync(TId id);
 
         Task<IActionResult> InsertAsync([FromBody] TRequestDto obj);
-        Task<IActionResult> InsertAllAsync([FromBody] List<TRequestDto> obj);
+        Task<IActionResult> InsertAsync([FromBody] List<TRequestDto> obj);
 
 
         Task<IActionResult> UpdateAsync([FromBody] TRequestDto obj);

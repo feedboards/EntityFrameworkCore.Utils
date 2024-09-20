@@ -7,11 +7,11 @@ namespace EntityFrameworkCore.Utils.Interfaces
         where TResponse : class
         where TRequest : class
     {
-        Task<List<TResponse>> GetAllAsync();
+        Task<List<TResponse>> GetAsync();
         Task<TResponse> GetByIdAsync(TId id);
 
         Task<TResponse> InsertAsync(TRequest obj);
-        Task<List<TResponse>> InsertAllAsync(List<TRequest> obj);
+        Task<List<TResponse>> InsertAsync(List<TRequest> obj);
 
         Task<TResponse> UpdateAsync(TRequest obj);
         Task<List<TResponse>> UpdateAsync(List<TRequest> obj);
