@@ -215,29 +215,27 @@ namespace EntityFrameworkCore.Utils.Services
             return deleteResults;
         }
 
-        // TODO fix
         public virtual async Task<dynamic?> ExecuteSqlAsync(ExecuteSqlRequestDto obj)
         {
-            //    using var command = _context.Database.GetDbConnection().CreateCommand();
+            using var command = _context.Database.GetDbConnection().CreateCommand();
 
-            //command.CommandText = obj.Sql;
-            //_context.Database.OpenConnection();
+            command.CommandText = obj.Sql;
+            _context.Database.OpenConnection();
 
-            //using var result = await command.ExecuteReaderAsync();
-            //var results = new List<dynamic>();
+            using var result = await command.ExecuteReaderAsync();
+            var results = new List<dynamic>();
 
-            //while (await result.ReadAsync())
-            //{
-            //    var data = new ExpandoObject() as IDictionary<string, object>;
-            //    for (var i = 0; i < result.FieldCount; i++)
-            //    {
-            //        data.Add(result.GetName(i), result.IsDBNull(i) ? null : result.GetValue(i));
-            //    }
-            //    results.Add(data);
-            //}
-            //return results;
+            while (await result.ReadAsync())
+            {
+               var data = new ExpandoObject() as IDictionary<string, object>;
+               for (var i = 0; i < result.FieldCount; i++)
+               {
+                   data.Add(result.GetName(i), result.IsDBNull(i) ? null : result.GetValue(i));
+               }
+               results.Add(data);
+            }
 
-            return null;
+            return results;
         }
     }
 
