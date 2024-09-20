@@ -14,16 +14,16 @@ jobs:
           dotnet-version: "8.0.x"
 
       - name: Restore dependencies
-        run: dotnet restore Utils.EF.slnf
+        run: dotnet restore EntityFrameworkCore.Utils.slnf
 
       - name: Build
-        run: dotnet build Utils.EF.slnf --configuration Release --no-restore
+        run: dotnet build EntityFrameworkCore.Utils.slnf --configuration Release --no-restore
 
       - name: Pack
-        run: dotnet pack Utils.EF.slnf --configuration Release --no-build --output ./nupkgs -p:PackageVersion=${{ github.ref_name }}
+        run: dotnet pack EntityFrameworkCore.Utils.slnf --configuration Release --no-build --output ./nupkgs -p:PackageVersion=${{ github.ref_name }}
 
       - name: Publish to GitHub Packages
-        run: dotnet nuget push ./nupkgs/*.nupkg --source "https://nuget.pkg.github.com/feedboards/index.json" --api-key ${{ secrets.GH_TOKEN }}
+        run: dotnet nuget push ./nupkgs/*.nupkg --source "https://api.nuget.org/v3/index.json" --api-key ${{ secrets.NUGET_API_KEY }}
         env:
           OWNER: feedboards
 

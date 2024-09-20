@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "EntityFrameworkCore.Utils.sln",
+    "projects": [
+      "src\\EntityFrameworkCore.Utils\\EntityFrameworkCore.Utils.csproj"
+    ]
+  }
+}
