@@ -7,8 +7,8 @@
 	<Version>1.0.0</Version>
 	<Authors>Katyara11;Katyaraa1</Authors>
 	<Company>feedboards</Company>
-	<Product>Clouds.Net.AWS</Product>
-	<PackageId>Clouds.Net.AWS</PackageId>
+	<Product>EntityFrameworkCore.Utils</Product>
+	<PackageId>EntityFrameworkCore.Utils</PackageId>
 	<Description>A library aimed at simplifying standard CRUD operations for Entity Framework Core</Description>
 	<PackageTags>entity-framework-core;EF;EntityFramework;EntityFrameworkCore;EFCore;EntityFrameworkCoreUtils</PackageTags>
 	<RepositoryUrl>https://github.com/feedboards/EntityFrameworkCore.Utils</RepositoryUrl>
