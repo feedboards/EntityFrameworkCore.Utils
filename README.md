@@ -9,6 +9,9 @@
 
 ## CRUDController
 
+> [!NOTE]
+> The default `Id` type is `Guid` 
+
 - `GetAsync()`: get all data.
 - `GetByIdAsync(TId id)`: get one object by id.
 
@@ -27,6 +30,9 @@
 - `SoftDeleteAsync([FromBody] List<TId> id)`: GPT: MAKE HERE DELCRIPTION OF THE METHOD
 
 ## CRUDService
+
+> [!NOTE]
+> The default `Id` type is `Guid` 
 
 - `GetAsync()`: get all data.
 - `GetByIdAsync(TId id)`: get one object by id.
